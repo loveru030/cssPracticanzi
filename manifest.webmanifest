@@ -1,0 +1,15 @@
+{
+  "background_color": "yellow",
+  "description": "CSS Practice Anzi description",
+  "display": "fullscreen",
+  "icons": [
+    {
+      "src": "img/icon/main.ico",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ],
+  "name": "CSS Practice Anzi",
+  "short_name": "CP anzi",
+  "start_url": "/cssPracticanzi/index.html"
+}
