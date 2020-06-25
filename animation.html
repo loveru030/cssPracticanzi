@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8" />
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <title>lovely</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+   <script src="main.js"></script>
+   <style>
+     @keyframes show {
+        0% {
+          opacity: 0;
+          transform: translateX(0);
+        }
+        50% {
+          opacity: 0.5;
+          background-color: yellow;
+          transform: translateX(500px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateX(200px);
+        }
+     }
+     #element {
+       margin: 0 auto;
+       width: 100px;
+       height: 100px;
+       transition: 0.35s;
+       background-color: red;
+       animation: show 2s forwards;
+       animation-delay: 0.2s;
+       animation-fill-mode: both;
+       animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+       /*animation-iteration-count: infinite;
+       animation-direction: alternate; 애니메이션을 지속하는 것 그리고 편하*/
+       /*animation-name: show;
+       animation-duration: 2s;
+       animation-fill-mode: forwards;*/
+     }
+     #element:hover {
+       background-color: blue;
+       transform: translateY(100px) scaleX(2);
+       /*z축에 효과를 주고 싶다면
+      부모요소에 persfective를 넣어주셈*/
+     }
+   </style>
+</head>
+<body>
+  <div id="element"></div>
+</body>
+</html>

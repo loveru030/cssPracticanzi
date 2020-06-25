@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8" />
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <title>index</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+   <link rel="stylesheet" type="text/css" media="screen" href="animation.css" />
+   <link rel="shortcut icon" href="img/icon/main.ico">
+   <script src="main.js"></script>
+   <style>
+   @keyframes cshow {
+     from {
+       transform: translateY(100px) scale(0.2);
+       opacity: 0;
+       background-color: aqua;
+     }
+     to {
+       transform: translateY(0) scale(1);
+       opacity: 1;
+     }
+   }
+   .text-area {
+     margin-top: 90px;
+     margin-left: 24px;
+   }
+   .text-area h1 {
+     margin-bottom: 22px;
+     animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+     animation: showtext 0.8s;
+   }
+   .desc {
+   }
+   .line {
+     width: 46px;
+     height: 1px;
+     display: inline-block;
+     position: relative;
+     top: -7px;
+     background-color: #FFE6CF;
+     opacity: 0.2;
+   }
+   .volume {
+     margin-bottom: 85px;
+   }
+   #circle-wrapper {
+     position: relative;
+     margin-left: 24px;
+     margin-top: 42px;
+     height: 246px;
+   }
+   .circle {
+     width: 246px;
+     height: 246px;
+     border-radius: 50%;
+     position: absolute;
+     animation: cshow 1s;
+     animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+     animation-fill-mode: both;
+   }
+   .circle:nth-child(1) {
+     background-color: transparent;
+     border: 1px solid rgba(0, 0, 0, 0.3);
+     box-sizing: border-box;   /*일반적으로 보더값을 주면 아웃라인으로되기때문에
+         박스 사이징:보더박스를 넣어주면 인라인으로 된다*/
+     animation-delay: 0.2s;
+   }
+   .circle:nth-child(2) {
+     background-color: #ffc000;
+     left: 82px;
+     animation-delay: 0.3s;
+   }
+   .circle:nth-child(3) {
+     background-color: #fedd15;
+     left: 164px;
+     animation-delay: 0.4s;
+     /* transition: 0.3s;
+     top: 0; 시작점과 트렌지션을 할 수 있는 태그*/
+   }
+
+   /* .circle:nth-child(3):hover {
+     background-color: #987de6;
+     top: -20px;
+   }
+   .circle:nth-child(3):active {
+     background-color: #fedd15;
+     top: -10px;
+   } 애니메이션을 주는 태그*/
+   #badge {
+     background-color: #ffc000;
+     width: 56px;
+     height: 56px;
+     color: #485861;
+     margin-left: 24px;
+     padding-left: 13px;
+     padding-top: 18px;
+     box-sizing: border-box;
+     font-size: 9px;
+     line-height: 11px;
+     position: fixed;
+     top: 0;
+     right: 24px;
+     font-weight: bold;
+     animation: slidedown 0.5s;
+     animation-fill-mode: both;
+     animation-delay: 0.5s
+   }
+
+   </style>
+</head>
+<body>
+ <div class="text-area stagger-wrapper"><!-- 텍스트 영역 -->
+  <h1>
+    <div class="volume stagger-item">vol. 4</div>
+    <div class="title">
+      <div class="stagger-item">
+        Classics
+      <div class="line"></div>
+    </div>
+    <div class="stagger-item">never</div>
+    <div class="stagger-item">get old.</div>
+  </div>
+  </h1>
+  <p class="desc stagger-item">We'll make a mobile magezine<br>using html,
+  css only.
+  </p>
+ </div>
+ <div id="circle-wrapper"><!-- 원 영역 -->
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+ </div>
+ <div><!-- 뱃지 -->
+  <div id="badge">Ex-
+    <br>clusive</div>
+ </div>
+ <nav class="gnb">
+  <a href="index.html" class="cover click-effect active">
+    <img src="img/icon/cover.svg">
+  </a>
+  <a href="issue.html" class="issue click-effect">
+    <img src="img/icon/issue.svg">
+  </a>
+  <a href="like.html" class="like click-effect">
+    <img src="img/icon/like.svg">
+  </a>
+  <a href="my.html" class="my click-effect">
+    <img src="img/icon/more.svg">
+  </a>
+ </nav>
+</body>
+</html>

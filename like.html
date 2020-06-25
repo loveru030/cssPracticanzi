@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8" />
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <title>like</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+   <link rel="stylesheet" type="text/css" media="screen" href="animation.css" />
+   <link rel="shortcut icon" href="img/icon/main.ico">
+   <script src="main.js"></script>
+   <style>
+      .search {
+        margin: 20px;
+        position: relative;
+        animation: slidedown 0.5s;S
+      }
+      .search form {
+        display: flex;
+      }
+      .search .search-field {
+        width: 100%;
+        flex-shrink: 0;
+        transition: 0.3s;
+      }
+      .search .search-field:focus {
+        flex-shrink: initial;
+      }
+      .search .search-field:focus ~ .cancel {
+        opacity: 1;
+      }
+      .search .cancel {
+        flex-shrink: 0;
+        margin-left: 20px;
+        opacity: 0;
+        transition: 0.2s;
+      }
+      .search input {
+        width: 100%;
+      }
+      .search .searchicon {
+        position: absolute;
+        left: 12px;
+        top: 12px;
+        opacity: 0.3;
+      }
+      .search .search-field:focus ~ .searchicon {
+        opacity: 1;
+      }
+      .text-area {
+        margin: 24px;
+        margin-top: 124px;
+        margin-bottom: 12px;
+      }
+      .text-area .desc {
+        margin-top: 12px;
+      }
+      .list {
+        font-size: 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-auto-rows: 148px;
+        grid-column-gap: 17px;
+        grid-row-gap: 18px;
+        padding: 24px;
+      }
+      .list .item {
+        display: inline-block;
+        background-size: cover;
+        background-position: center;
+        border-radius: 5px;
+      }
+      /*.list {
+        font-size: 0;
+        padding: 16px;
+      }
+      .list .item{
+        width: calc(50% - 16px);
+        height: 148px;
+        background-color: red;
+        display: inline-block;
+        background-size: cover;
+        background-position: center;
+        margin: 8px;
+        border-radius: 5px;
+      }css의 그리드생기기전 예전 방법*/
+      .list .item:nth-child(1) {
+        background-image: url("img/likes-1.jpg");
+      }
+      .list .item:nth-child(2) {
+        background-image: url("img/likes-2.jpg");
+      }
+      .list .item:nth-child(3) {
+        background-image: url("img/likes-3.jpg");
+      }
+      .list .item:nth-child(4) {
+        background-image: url("img/likes-4.jpg");
+      }
+      .list .item:nth-child(5) {
+        background-image: url("img/likes-1.jpg");
+      }
+      .list .item:nth-child(6) {
+        background-image: url("img/likes-2.jpg");
+      }
+      /*퍼센트로 한다면 부모의 값을 물려받기 때문에 부모의 값이 없을때
+      적용이 안됨*/
+   </style>
+</head>
+<body>
+  <!-- 검색영역 명시적인 태그를 써주는 이유는 웹의 크롤링에게 알려줘서
+   검색을 편하게 해주기 위해서 필수는 아니지만 권장사항 -->
+   <header class="search">
+     <form>
+       <input class="search-field" placeholder="Search" type="text"><!--input 에서 엄청나게 많은 종류가 있음 -->
+       <img class="searchicon" src="img/icon/search.svg">
+       <button class="cancel">취소</button>
+     </form>
+   </header>
+   <!-- 텍스트영역 -->
+   <div class="text-area">
+     <h1 class="stagger-item">Likes 26</h1>
+     <div class="desc stagger-item">
+       We'll make a mobile magazin app<br>
+       using html, css only.
+     </div>
+   </div>
+
+   <!-- 콜렉션 뷰 -->
+   <ul class="list">
+     <li class="item stagger-item"></li>
+     <li class="item stagger-item"></li>
+     <li class="item stagger-item"></li>
+     <li class="item stagger-item"></li>
+     <li class="item stagger-item"></li>
+     <li class="item stagger-item"></li>
+   </ul>
+   <nav class="gnb">
+    <a href="index.html" class="cover click-effect">
+      <img src="img/icon/cover.svg">
+    </a>
+    <a href="issue.html" class="issue click-effect">
+      <img src="img/icon/issue.svg">
+    </a>
+    <a href="like.html" class="like click-effect active">
+      <img src="img/icon/like.svg">
+    </a>
+    <a href="my.html" class="my click-effect">
+      <img src="img/icon/more.svg">
+    </a>
+   </nav>
+</body>
+</html>

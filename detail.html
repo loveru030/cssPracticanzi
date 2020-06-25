@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8" />
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <title>detail</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+   <link rel="stylesheet" type="text/css" media="screen" href="animation.css" />
+   <link rel="shortcut icon" href="img/icon/main.ico">
+   <script src="main.js"></script>
+  </head>
+  <style>
+  #trigger {
+    display: none;
+  }
+  .checker {
+    background-image: url(img/icon/like.svg);
+    background-position: center;
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+    background-repeat: no-repeat;
+    transition: 0.2s;
+  }
+  .checker:hover {
+    transform: scale(1.5);
+  }
+  #trigger:checked + .checker {
+    background-image: url(img/icon/redlike.svg);
+    background-position: center;
+    transform: scale(1);
+  }
+  /* .heart {
+    transition: 0.3s;
+  }
+  .heart:hover {
+    transform: scale(1.5);
+  }
+  .heart:active {
+    filter: opacity(.4) drop-shadow(0 0 0 red);
+  } */
+   body {
+     padding: 24px;
+   }
+   header {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     position: fixed;
+     top: 0;
+     left: 0;
+     width: 100%;
+     padding: 24px;
+     box-sizing: border-box;
+     background-color: #485861;
+   }
+    .text-area {
+      margin-top: 192px;
+    }
+    .title {
+      margin-bottom: 12px;
+    }
+    sup {
+      font-size: 10px;
+    }
+    .line {
+      width: 30px;
+      height: 1px;
+      border-bottom: 1px solid #FFE6CF;
+      opacity: 0.3;
+      margin: 32px 0;
+    }
+    .content {
+      font-size: 16px;
+      font-weight: normal;
+    }
+  </style>
+<body>
+  <header>
+    <a href="issue.html"><img src="img/icon/arrow-back.svg"></a>
+    <input id="trigger" type="checkbox">
+    <label for="trigger" class="checker"></label>
+  </header>
+  <div class="text-area">
+    <h1 class="title stagger-item">
+      Issues <sup>1</sup>
+    </h1>
+    <p class="stagger-item">
+      We'll make a mobile magezine <br>
+      using html, css only
+    </p>
+  </div>
+  <div class="line stagger-item"></div>
+  <p class="content stagger-item">Lorem ipsum dolor sit amet, consectetur
+     adipisicing elit, sed do eiusmod tempor
+     incididunt ut labore et dolore magna aliqua.
+     Ut enim ad minim veniam, quis nostrud exercitation
+     ullamco laboris nisi ut aliquip ex ea commodo consequat.
+     Duis aute irure dolor in reprehenderit in voluptate velit esse
+     cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+     cupidatat non proident, sunt in culpa qui officia deserunt mollit
+     anim id est laborum.
+     incididunt ut labore et dolore magna aliqua.
+     Ut enim ad minim veniam, quis nostrud exercitation
+     ullamco laboris nisi ut aliquip ex ea commodo consequat.
+     Duis aute irure dolor in reprehenderit in voluptate velit esse
+     cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+     cupidatat non proident, sunt in culpa qui officia deserunt mollit
+     anim id est laborum</p>
+
+     <nav class="gnb">
+      <a href="index.html" class="cover click-effect">
+        <img src="img/icon/cover.svg">
+      </a>
+      <a href="issue.html" class="issue click-effect active">
+        <img src="img/icon/issue.svg">
+      </a>
+      <a href="like.html" class="like click-effect">
+        <img src="img/icon/like.svg">
+      </a>
+      <a href="my.html" class="my click-effect">
+        <img src="img/icon/more.svg">
+      </a>
+     </nav>
+</body>
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8" />
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <title>issue</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+   <link rel="stylesheet" type="text/css" media="screen" href="animation.css" />
+   <link rel="shortcut icon" href="img/icon/main.ico">
+   <script src="main.js"></script>
+   <style>
+     .featued {
+       height:  310px;
+       background-color: black;
+       position: relative;
+       background-image: url("img/issue-1.jpg");
+       background-size: cover;
+     }
+     .count {
+       position: absolute;
+       top: 30px;
+       right: 26px;
+       animation-name: slidedown;
+       animation-duration: 0.5s;
+     }
+     .text-area {
+       position: absolute;
+       bottom: 36px;
+       left: 24px;
+     }
+     .featued .title {
+       margin-bottom: 12px;
+     }
+     sup {
+       font-size: 10px;
+     }
+     .swiper{
+       white-space: nowrap;
+       overflow-x: scroll;
+       padding: 24px;
+       padding-bottom: 7px;
+       /*padding: 10px(상하) 24px(좌우)
+       padding: 10px 24px 36px 100px (상우하좌)*/
+     }
+     .swiper li {
+       width: 136px;
+       height: 80px;
+       background-size: cover;
+       background-position: center;
+       display: inline-block;
+       border-radius: 5px;
+       margin-right: 10px;
+     }
+     .swiper li:nth-child(1) {
+       background-image: url("img/issue-2.jpg");
+     }
+     .swiper li:nth-child(2) {
+       background-image: url("img/issue-3.jpg");
+     }
+     .swiper li:nth-child(3) {
+       background-image: url("img/issue-4.jpg");
+     }
+     .item {
+       padding: 17px 24px 20px 24px;
+       border-bottom: 1px solid rgba(0,0,0, 0.08);
+       display: flex;
+       align-items: center;
+       position: relative;
+     }
+     /* Pseudo element 따로 의미 없는 태그를 생성하지 않고
+     css 자체에서 내용을 생성하는 것 */
+     /* .item::before {
+       content: "내용"; ,---이걸 꼭 써야됨
+     } */
+     .item .num {
+       width: 26px;
+       height: 26px;
+       background-color: #FFE6CF;
+       color: #485762;
+       border-radius: 50%;
+       padding: 5px 10px;
+       box-sizing: border-box;
+       margin-right: 20px;
+     }
+     .item .infos {
+     }
+     .item .title {
+       font-size: 17px;
+     }
+     .item .desc {
+       font-size: 13px;
+       opacity: 0.7:
+     }
+   </style>
+</head>
+<body>
+  <div class="featued">
+    <h1 class="count">8</h1>
+    <div class="text-area">
+      <h1 class="title stagger-item">
+        Issues <sup>1</sup>
+      </h1>
+      <p class="stagger-item">
+        We'll make a mobile magezine <br>
+        using html, css only
+      </p>
+    </div>
+  </div>
+
+  <ul class="swiper">
+    <li class="click-effect stagger-item right"></li>
+    <li class="click-effect stagger-item right"></li>
+    <li class="click-effect stagger-item right"></li>
+    <!-- <div><img src="img/issue-2.jpg"</div>
+    <div><img src="img/issue-3.jpg"</div>
+    <div><img src="img/issue-4.jpg"</div> -->
+  </ul>
+
+<ul class="list">
+  <a href="detail.html">
+  <li class="item click-effect stagger-item">
+    <div class="num">1</div>
+    <div class="infos">
+      <div class="title">hello world</div>
+      <div class="desc">
+        Lorem Ipsum is simply dummy text of the printing and
+        typesetting industry.
+      </div>
+    </div>
+  </li>
+</a>
+  <a href="detail.html">
+  <li class="item click-effect stagger-item">
+    <div class="num">2</div>
+    <div class="infos">
+      <div class="title">hello world</div>
+      <div class="desc">
+        Lorem Ipsum is simply dummy text of the printing and
+        typesetting industry.
+      </div>
+    </div>
+  </li>
+</a>
+  <a href="detail.html">
+  <li class="item click-effect stagger-item">
+    <div class="num">3</div>
+    <div class="infos">
+      <div class="title">hello world</div>
+      <div class="desc">
+        Lorem Ipsum is simply dummy text of the printing and
+        typesetting industry.
+      </div>
+    </div>
+  </li>
+</a>
+</ul>
+<nav class="gnb">
+ <a href="index.html" class="cover click-effect">
+   <img src="img/icon/cover.svg">
+ </a>
+ <a href="issue.html" class="issue click-effect active">
+   <img src="img/icon/issue.svg">
+ </a>
+ <a href="like.html" class="like click-effect">
+   <img src="img/icon/like.svg">
+ </a>
+ <a href="my.html" class="my click-effect">
+   <img src="img/icon/more.svg">
+ </a>
+</nav>
+</body>
+</html>
